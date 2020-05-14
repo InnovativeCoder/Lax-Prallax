@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallex</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#" class="logo"> About.</a>
+        <nav>
+          <img
+            src="https://image.flaticon.com/icons/svg/1828/1828551.svg"
+            alt="menu button"
+            width="20 px"
+            height="20 px"
+          />
+        </nav>
+      </header>
+
+      <h1 class="lax" data-lax-translate-y="0 0, 400 -400">
+        Innovative Coder
+      </h1>
+      <div class="line lax" data-lax-opacity="0 1, 100 0"></div>
+    </div>
+    <div
+      class="container secondary lax"
+      data-lax-translate-y="0 0, 400 -600"
+      data-lax-opacity="0 0, 300 1"
+    >
+      <h2>Entrepreneur</h2>
+      <p class="subtext">Growth Hacker</p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vero fugit
+        sint sequi molestiae facilis consequuntur in, officiis nostrum magni
+        tempora fugiat mollitia iusto sed ex enim deleniti modi autem!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vero fugit
+        sint sequi molestiae facilis consequuntur in, officiis nostrum magni
+        tempora fugiat mollitia iusto sed ex enim deleniti modi autem!
+      </p>
+    </div>
+
+    <img
+      src="./image/mountains.png"
+      alt="Mountains"
+      class="mountains lax"
+      data-lax-translate-y="0 0, 400 -100"
+    />
+    <img
+      src="./image/forest.png"
+      alt="Forest"
+      class="trees lax"
+      data-lax-translate-y="0 0, 400 -230"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+      window.onload = function () {
+        lax.setup(); // init
+
+        const updateLax = () => {
+          lax.update(window.scrollY);
+          window.requestAnimationFrame(updateLax);
+        };
+
+        window.requestAnimationFrame(updateLax);
+      };
+    </script>
+  </body>
+</html>
